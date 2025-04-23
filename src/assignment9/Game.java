@@ -8,12 +8,15 @@ public class Game {
 	private Snake s;
 	private Food f;
 	
+	//The Game class is the controller
+	
 	public Game() {
 		StdDraw.enableDoubleBuffering();
 		s = new Snake();
 		f = new Food();
 		//FIXME - construct new Snake and Food objects
 	}
+	
 	
 	public void play() {
 		//The game continues as long as the snake's head is within bounds
@@ -32,7 +35,7 @@ public class Game {
 			updateDrawing();
 			
 			/*
-			 * 1. Pass direction to your snake
+			 * 1. checks the bounds and Pass direction to your snake
 			 * 2. Tell the snake to move
 			 * 3. If the food has been eaten, make a new one
 			 * 4. Update the drawing
